@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        const calculate = () => {
+            event.preventDefault();
+  var englishmark = document.getElementById("eng").value;
+  var mathsmark = document.getElementById("math").value;
+  var physicsmark = document.getElementById("phy").value;
+  var chemistrymark = document.getElementById("chem").value;
+  var computermark = document.getElementById("comp").value;
+  if (
+    0 > englishmark > 100 ||
+    0 > mathsmark > 100 ||
+    0 > physicsmark > 100 ||
+    0 > chemistrymark > 100 ||
+    0 > computermark > 100
+  ) {
+    alert("Please Enter Marks in the range of 0 to 100");
+  }
+};
+    </script>
+    <title>Grade Calculator</title>
+</head>
+<body style="background-color: #cee5eb; margin: 0%; padding: 0%; top: 0%;bottom: 0%;">
+    <div style="display: flex; justify-content: center; align-items: center; height:100vh; flex-direction: column">
+        <div style="height: 12%; border: 2px; width: 100%; display: flex; justify-content: center; align-items: center;">
+            <h1>GRADING SYSTEM ASSIGNMENT</h1>
+        </div>
+        <div style="height: 88%; width: 100%; display:flex; flex-direction: row;">
+            <div style="width: 60%; display: flex; justify-content: center; align-items: center;">
+                <div style="height:80%; border: 2px solid black; width: 80%;" >
+                   <div style="display: flex; justify-content: center; align-items: center; background-color: black; color: white; height: 10%;">
+                    <h2>Grading System In Js</h2>
+                    </div>
+                  <div style="background-color: white; height: 90%; position: relative;">
+                    <form onsubmit={calculate} style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 5%; position:relative;">
+                        <div style="display: flex; flex-direction: row; gap: 2.5rem; justify-content: space-between;">
+                            <label>English</label>
+                            <input type="number" id="eng"/>
+                        </div>
+                        <div style="display: flex; flex-direction: row; gap: 2.5rem; margin-top: 15px; justify-content: space-between;">
+                            <label>Maths</label>
+                            <input type="number" id="math"/>
+                        </div>
+                        <div style="display: flex; flex-direction: row; gap: 2.5rem; margin-top: 15px; justify-content: space-between;">
+                            <label>Physics</label>
+                            <input type="number"id="phy" />
+                        </div>
+                        <div style="display: flex; flex-direction: row; gap: 2.5rem; margin-top: 15px; justify-content: space-between;">
+                            <label>Chemistry</label>
+                            <input type="number" id="chem"/>
+                        </div>
+                        <div  style="display: flex; flex-direction: row; gap: 2.5rem; margin-top: 15px; justify-content: space-between;">
+                            <label>Computer</label>
+                            <input type="number" id="comp"/>
+                        </div>
+                        <div style="margin-top:15px;">
+                            <button type="submit" style="background-color: black; color: white;">Calculate Grade</button>
+                        </div>    
+                    </form>
+                   </div>
+                </div>
+            </div>
+            <div style="width: 40%; display: flex; justify-content: center; align-items: center;">
+              <div style="height:80%; border: 2px solid black; width: 80%; display: flex;flex-direction: column;">
+                  <div style="display: flex; flex-direction: column; border: 1px solid black; height: 33%;">
+                    <div style="background-color: black; color: white; height: 20%; justify-content: center; align-items: center; display: flex;">
+                        <h2>Total</h2>
+                    </div>
+                    <div style="height: 80%; background-color: white; display: flex; align-items: center;">
+                        <label>Total Marks :</label><span>100</span>
+                    </div>
+                  </div>
+                  <div style="display: flex; flex-direction: column; border: 1px solid black; height: 33%;">
+                    <div style="background-color: black; color: white; height: 20%; justify-content: center; align-items: center; display: flex;">
+                        <h2>Average</h2>
+                    </div>
+                    <div style="height: 80%; background-color: white; display: flex; align-items: center;">
+                        <label>Your Average Marks are :</label><span>100</span>
+                    </div>
+                  </div>
+                  <div style="display: flex; flex-direction: column; border: 1px solid black; height: 33%;">
+                    <div style="background-color: black; color: white; height: 20%; justify-content: center; align-items: center; display: flex;">
+                        <h2>Grade</h2>
+                    </div>
+                    <div style="height: 80%; background-color: white; display: flex; align-items: center;">
+                        <label>You got <span>F</span> Grade</label>
+                    </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
